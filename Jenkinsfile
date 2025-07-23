@@ -1,4 +1,4 @@
-@Library("mylibs") _
+@Library("sharedlibarary2") _
 pipeline {
   agent any
   tools {
@@ -12,7 +12,7 @@ pipeline {
     }
     stage("Deploy To Dev"){
       steps{
-        tomcatDeploy("tomcat-dev","ec2-user",["172.31.13.89","172.31.13.89"])
+        tomcatDeploy("tomcat-dev","ec2-user",["172.31.88.123","172.31.88.123"])
       }
     }
   }
